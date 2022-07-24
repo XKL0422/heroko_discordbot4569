@@ -34,12 +34,5 @@ import time
 client = discord.Client()
 
 
-# Bot起動
-client.run(TOKEN)
-#導入Discord.py
-import discord
-import time
-#client是我們與Discord連結的橋樑
-client = discord.Client()
 
 
