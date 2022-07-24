@@ -21,11 +21,24 @@ client = discord.Client()
 @client.event
 #當有訊息時
 async def on_message(message):
+    if message.content == '酷':
+        #然後回傳訊息
+        await message.channel.send('酷的')
+        
+@client.event
+#當有訊息時
+async def on_message(message):
+    if message.content == '碰6要碰啥':
+        #然後回傳訊息
+        await message.channel.send('肯定卡雷')
+        
+@client.event
+#當有訊息時
+async def on_message(message):
     if message.content == '我好帥喔':
         #然後回傳訊息
-        await message.channel.send('不好意思，不要騙人啦')
-        
-
+        await message.channel.send('你長得跟屎一樣')
+                
 # Bot起動
 client.run(TOKEN)
 #導入Discord.py
