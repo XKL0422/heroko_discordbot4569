@@ -17,20 +17,6 @@ import discord
 import time
 #client是我們與Discord連結的橋樑
 client = discord.Client()
-
-@client.event
-#當有訊息時
-async def on_message(message):
-    if message.content == '酷':
-        #然後回傳訊息
-        await message.channel.send('酷的')
-        
-@client.event
-#當有訊息時
-async def on_message(message):
-    if message.content == '碰6要碰啥':
-        #然後回傳訊息
-        await message.channel.send('肯定卡雷')
         
 @client.event
 #當有訊息時
