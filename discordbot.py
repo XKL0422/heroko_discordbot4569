@@ -12,8 +12,17 @@ client = discord.Client()
 # 起動時呼叫
 @client.event
 async def on_ready():
-    print('成功登入')
-
+    print('成功登入') 
+    
+@client.event
+#當有訊息時
+async def on_message(message):
+    if message.content == '碰6要碰啥':
+        #刪除傳送者的訊息
+        await message.delete()
+        #然後回傳訊息
+        await message.channel.send('肯定卡雷')
+        
 # 收到訊息時呼叫
 @client.event
 async def on_message(message):
@@ -42,13 +51,5 @@ import time
 #client是我們與Discord連結的橋樑
 client = discord.Client()
 
-@client.event
-#當有訊息時
-async def on_message(message):
-    if message.content == '碰6要碰啥':
-        #刪除傳送者的訊息
-        await message.delete()
-        #然後回傳訊息
-        await message.channel.send('肯定卡雷')
-        
+
 
