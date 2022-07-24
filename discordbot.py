@@ -36,3 +36,19 @@ async def on_message(message):
 
 # Bot起動
 client.run(TOKEN)
+#導入Discord.py
+import discord
+import time
+#client是我們與Discord連結的橋樑
+client = discord.Client()
+
+@client.event
+#當有訊息時
+async def on_message(message):
+    if message.content == '碰6要碰啥':
+        #刪除傳送者的訊息
+        await message.delete()
+        #然後回傳訊息
+        await message.channel.send('肯定卡雷')
+        
+client.run('OTk4ODMwNDM3NDQwOTU0NDM5.Goq4AK.1AyF2jZ8CQ5y1dpLoBeyanb6CeZzbyckW63I04')
