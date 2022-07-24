@@ -51,4 +51,4 @@ async def on_message(message):
         #然後回傳訊息
         await message.channel.send('肯定卡雷')
         
-client.run('OTk4ODMwNDM3NDQwOTU0NDM5.Goq4AK.1AyF2jZ8CQ5y1dpLoBeyanb6CeZzbyckW63I04')
+
