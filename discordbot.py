@@ -20,10 +20,14 @@ client = discord.Client()
         
 @client.event
 #當有訊息時
+import random
 async def on_message(message):
-    if message.content == '我好帥喔':
-        #然後回傳訊息
-        await message.channel.send('你長得跟屎一樣')
+    if message.content == '111':
+       names = ['John', 'Juan', 'Jane', 'Jack', 'Jill', 'Jean']
+       def selectRandom(names):
+       return random.choice(names)
+
+print("The name selected is: ", selectRandom(names))
                 
 # Bot起動
 client.run(TOKEN)
