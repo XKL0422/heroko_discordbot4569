@@ -23,9 +23,10 @@ client = discord.Client()
 import random
 async def on_message(message):
     if message.content == '111':
-       names = ['John', 'Juan', 'Jane', 'Jack', 'Jill', 'Jean']
-       def selectRandom(names):
-       return random.choice(names)
+               def selectRandom(names):
+               return random.choice(names)
+               await message.channel.send = ['John', 'Juan', 'Jane', 'Jack', 'Jill', 'Jean']
+
 
 print("The name selected is: ", selectRandom(names))
                 
