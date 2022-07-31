@@ -21,18 +21,12 @@ async def on_message(message):
     if message.author.bot:
         return
     
-    if client.user in message.mentions: # @判定
-        translator = googletrans.Translator()
-        robotName = client.user.name
-        first, space, content = message.clean_content.partition('@'+robotName+' ')
-        
-        if content == '':
-            content = first
-        if translator.detect(content).lang == DSTLanguage:
-            return
-        if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
-            remessage = translator.translate(content, dest='zh-tw').text
-            await message.reply(remessage) 
+    if message.author == client.user:
+        return
+    #如果包含 ping，機器人回傳 pong
+    if message.content == '殺人魔':
+        await message.channel.send('噁心小鬼')
+
 
 # Bot起動
 client.run(TOKEN)
