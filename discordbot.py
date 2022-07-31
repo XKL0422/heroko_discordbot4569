@@ -20,7 +20,6 @@ async def on_message(message):
     # 送信者為Bot時無視
     if message.author.bot:
         return
-    
     if message.author == client.user:
         return
     #如果包含 ping，機器人回傳 pong
