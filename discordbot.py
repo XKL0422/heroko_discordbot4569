@@ -20,7 +20,7 @@ async def on_message(message):
         return
     #如果包含 ping，機器人回傳 pong
     if message.content == '殺人魔':
-        await message.channel.send('噁心小鬼')
+        await message.channel.send('噁心')
 
 
 # Bot起動
